@@ -82,3 +82,14 @@ setrange color 2 blue # replace from char
 ```
 
 ### Numbers
+
+Redis stores numbers as strings: using these commands on strings is not possible
+
+```sh
+set age 20
+incr age # 21
+decr age # 20
+incrby age 10 # 30
+decrby age 10 # 20
+incrbyfloat age 1.123
+```
