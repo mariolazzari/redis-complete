@@ -70,5 +70,15 @@ msetnx color red car toyota # if any keys exist, no set is done
 ### Get and MGet
 
 ```sh
-
+mget color car # multiple get
 ```
+
+### String ranges
+
+```sh
+del color # delete a key
+getrange color 0 3 # get substring
+setrange color 2 blue # replace from char
+```
+
+### Numbers
