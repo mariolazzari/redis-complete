@@ -93,3 +93,15 @@ incrby age 10 # 30
 decrby age 10 # 20
 incrbyfloat age 1.123
 ```
+
+### String exercises
+
+```sh
+set car toyota
+
+set shape traingle nx
+setnx shape traingle
+
+set news 'Todays Headlines' ex 2
+
+```
