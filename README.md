@@ -40,5 +40,35 @@ GET message
 ### Variations of SET
 
 ```sh
+set color red
+set color greet get #.return prev value
+set colot blue NX # set only in key not exists
+```
+
+### Expiration options
+
+```sh
+set color red ex 2 # expires after 2s
+```
+
+### Expiration use cases
+
+- API checks Redis cache
+- If empty, API reads data from DB and updates cache
+- Expiration invalidates cahce in order to update cache regurally
+
+### Setting multiple keys
+
+```sh
+setex color 2 red # set with expiration
+setnx color red # set var only if i does not exist
+mset color red car toyota # multiple vars set
+msetnx color red car toyota # if any keys exist, no set is done
+
+```
+
+### Get and MGet
+
+```sh
 
 ```
