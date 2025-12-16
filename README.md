@@ -102,6 +102,39 @@ set car toyota
 set shape traingle nx
 setnx shape traingle
 
-set news 'Todays Headlines' ex 2
+set news "Todays's Headlines" ex 2
+```
 
+## eCommerce app
+
+### Redis client
+
+[docs](https://github.com/redis/node-redis)
+
+## Hash
+
+### Get and set
+
+```sh
+hset company name "My company" age 1995 revenue 5.3
+hget company name
+hget company revenue
+hgetall company
+```
+
+### Delete hash
+
+```sh
+hexists comapany name # 1
+del comapny
+hdel company name
+```
+
+### Numbers in hashes
+
+```sh
+hincrby company age 10
+hincrbyfloat company age 10.123
+hkeys company
+havalues comapny
 ```
