@@ -138,3 +138,22 @@ hincrbyfloat company age 10.123
 hkeys company
 havalues comapny
 ```
+
+## Design patterns
+
+### Data types
+
+#### Use hashes
+
+- record has many attributes
+- collection sorted in many different ways
+- single record access
+
+#### Do not use hashes
+
+- record must be unique
+- few attributes
+- creates relation
+- time series data
+
+### User implementation
