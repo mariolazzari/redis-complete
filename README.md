@@ -206,3 +206,7 @@ SCARD colors # cardinality
 SSCAN colors # scan all elements
 SSCAN colors 3 count 2
 ```
+
+## Sorted sets
+
+Mix of hash and set
