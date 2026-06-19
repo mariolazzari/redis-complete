@@ -157,3 +157,52 @@ havalues comapny
 - time series data
 
 ### User implementation
+
+## Sets
+
+### Basics
+
+- Collection of unique strigs
+- Add "S" to each previous commands
+
+```sh
+SMEMBERS colors red
+SMEMBERS # all set values
+SADD colors red # 1 or 0
+```
+
+
+### Unions
+
+All diffrence values from multiple sets
+
+```sh
+SUNION colors1 colors2 colors3
+```
+
+### Intersections
+
+```sh
+SINTER colors1 colors2 colors3
+```
+
+### Differences
+
+```sh
+SDIFF colors1 colors2 colors3
+```
+
+### Checking element
+
+```sh
+SISMEMBER colors red
+SMISMEMBER colors red # multiple
+```
+
+### Scanning a set
+
+```sh
+SCARD colors # cardinality
+SSCAN colors # scan all elements
+SSCAN colors 3 count 2
+```
