@@ -210,3 +210,57 @@ SSCAN colors 3 count 2
 ## Sorted sets
 
 Mix of hash and set
+
+### Add and remove
+
+```sh
+# add element
+ZADD products 45 monitor
+# get score
+ZSCORE products monitor
+# remove
+ZREM products monitor
+ZSCORE products monitor
+```
+
+### Finding range
+
+```sh
+DEL products
+ZADD products 45 monitor
+ZADD products 10 cpu
+ZADD products 55 keyboard
+# cardinality
+ZCARD products
+# count in range
+ZCOUNT products 0 55
+# exclude 55
+ZCOUNT products 0 (55
+# all
+ZCOUNT products
+```
+
+### Removing first and last
+
+```sh
+ZPOPMIN products
+ZPOPMAX products
+```
+
+### Update score
+
+```sh
+ZINCRBY products 15 cpu
+```
+
+### Querying sorted set
+
+```sh
+ZRANGE products 1 2
+ZRANGE products 1 2 WITHSCORES
+ZRANGE products 0 (55 BYSCORES WITHSCORES
+```
+
+## Sortes sets practice
+
+### Use cases
