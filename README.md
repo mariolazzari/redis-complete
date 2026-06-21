@@ -273,3 +273,19 @@ ZRANGE products 0 (55 BYSCORES WITHSCORES
 ## HyperLogsLogs structures
 
 ### HyperLogsLogs
+
+- Count approximatley unique elements
+- No stored element
+
+### When to use
+
+- Large number of items
+- No exact count needed
+
+## Lists
+
+### Reading and writing lists
+
+```sh
+
+```
