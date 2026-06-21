@@ -264,3 +264,10 @@ ZRANGE products 0 (55 BYSCORES WITHSCORES
 ## Sortes sets practice
 
 ### Use cases
+
+- Tabulate the last or the most
+- Create relation between sorted record
+
+## From relational data to Redis
+
+###
