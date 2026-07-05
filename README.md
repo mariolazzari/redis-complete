@@ -287,5 +287,35 @@ ZRANGE products 0 (55 BYSCORES WITHSCORES
 ### Reading and writing lists
 
 ```sh
+LPUSH temps 25
+RPUSH temps 27
+LLEN temps
+LINDEX temps
+LINDEX -1 # last
+```
+
+### Ranges and searches
+
+```sh
+DEL temps
+RPUSH 25
+RPUSH 27
+RPUSH 25
+RPUSH 30
+RPUSH 24
+
+LRANGE temps 0 3
+LRANGE temps 0 -1
+LRANGE temps 0 -2
+
+LPOS temps 25
+LPOS temps 25 RANKS 2 # second pos
+
+MAXLEN temps 10 
+´´´
+
+### Trimming lists
+
+```sh
 
 ```
