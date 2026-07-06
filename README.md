@@ -312,10 +312,33 @@ LPOS temps 25
 LPOS temps 25 RANKS 2 # second pos
 
 MAXLEN temps 10 
-´´´
+```
 
 ### Trimming lists
 
 ```sh
+LPOP temp 
+LPOP temp 2 # first 2
+RPOP temp
+RPOP temp 2 # last 2
 
+LTRIM temps 2 5 # select range and deletes others
 ```
+
+### Remove elements
+
+```sh
+LINSERT temps BEFOR 30 15
+LINDEX temps 3
+LRANGE temps 0 -1
+
+LREM temps -2 25 # remove 2 copies left to right
+LREM temps 2 25 # remove 2 copies right to left
+LREM temps 0 25 # remove all copies
+```
+
+### List use cases
+
+- Append/prepend only
+- First/last element needed only
+- No sorting
