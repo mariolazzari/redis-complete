@@ -366,4 +366,29 @@ EXEC
 
 ## Lua scripting
 
-### Lua intro
+### Lua basics
+
+[Online Lua](https://onecompiler.com/lua)
+
+```lua
+print ("Hello, World!")
+print(123)
+
+
+local sum = 1+1
+sum = 5
+
+if sum > 0 then
+    print(sum)
+end
+
+if 0 or '' then
+    print("0 is truthy")
+end
+
+if nil then
+    print("not printed")
+end
+
+globalSum = 2+2
+```
