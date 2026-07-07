@@ -342,3 +342,28 @@ LREM temps 0 25 # remove all copies
 - Append/prepend only
 - First/last element needed only
 - No sorting
+
+## More practice
+
+### Transaction
+
+```sh
+WATCH color
+
+GET colot
+GET count
+
+# start transaction
+MULTI
+
+SET color red
+SET count 5
+
+# commit transaction
+EXEC
+```
+
+
+## Lua scripting
+
+### Lua intro
