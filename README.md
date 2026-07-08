@@ -370,7 +370,7 @@ EXEC
 
 [Online Lua](https://onecompiler.com/lua)
 
-```lua
+```sh
 print ("Hello, World!")
 print(123)
 
@@ -391,4 +391,25 @@ if nil then
 end
 
 globalSum = 2+2
+```
+
+### Arrays
+
+```sh
+local colors = {'red', 'green', 'blue'}
+
+# 1st element index is 1
+print(colors[1])
+print(colors[2])
+print(colors[3])
+
+# count
+print(#colors)
+
+# add
+table.insert(colors, 'orange')
+print(colors[4])
+
+
+
 ```
