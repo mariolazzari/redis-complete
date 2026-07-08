@@ -398,18 +398,43 @@ globalSum = 2+2
 ```sh
 local colors = {'red', 'green', 'blue'}
 
-# 1st element index is 1
+-- 1st element index is 1
 print(colors[1])
 print(colors[2])
 print(colors[3])
 
-# count
+-- count
 print(#colors)
 
-# add
+-- add
 table.insert(colors, 'orange')
 print(colors[4])
 
+for i,v in ipairs(colors) do
+    print(i, v)
+end
+```
 
+### Tables
+
+```sh
+for i=5, 10 do
+    print(i)
+end
+
+-- obj
+local user = {id = 1, name = 'Mario'}
+print(user['id'])
+
+for k,v in pairs(user) do
+    print(k, v)
+end
+```
+
+### Load scripts
+
+```sh
+SCRIPT LOAD 'return 1 + 1'
+EVALSHA <script_id> 0
 
 ```
