@@ -451,5 +451,8 @@ EVALSHA <script_id> 0 '1'
 SET color red
 SCRIPT LOAD 'return redis.call('GET', 'color')'
 SCRIPT LOAD 'return redis.call('GET', KEYS[1])'
-
 ```
+
+## Concurrency issues
+
+###
