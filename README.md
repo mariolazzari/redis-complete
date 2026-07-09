@@ -436,5 +436,20 @@ end
 ```sh
 SCRIPT LOAD 'return 1 + 1'
 EVALSHA <script_id> 0
+```
+
+### Script parameters
+
+```sh
+SCRIPT LOAD 'return 1 + ARGV[1]'
+EVALSHA <script_id> 0 '1'
+```
+
+### Providing Key list
+
+```sh
+SET color red
+SCRIPT LOAD 'return redis.call('GET', 'color')'
+SCRIPT LOAD 'return redis.call('GET', KEYS[1])'
 
 ```
