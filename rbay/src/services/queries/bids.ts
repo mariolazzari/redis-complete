@@ -14,9 +14,9 @@ export const createBid = async (attrs: CreateBidAttrs) => {
 		if (!item) {
 			throw new Error('Item does not exist');
 		}
-		// if (item.price >= attrs.amount) {
-		// 	throw new Error('Bid too low');
-		// }
+		if (item.price >= attrs.amount) {
+			throw new Error('Bid too low');
+		}
 		if (item.endingAt.diff(DateTime.now()).toMillis() < 0) {
 			throw new Error('Item closed to bidding');
 		}
