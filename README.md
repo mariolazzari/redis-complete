@@ -489,3 +489,16 @@ export const withLock = async (key: string, cb: () => any) => {
 };
 ´´´
 ```
+
+## Streams
+
+### Use cases
+
+- Producer / consumer
+- Messages
+
+### Add messages
+
+```sh
+
+```
