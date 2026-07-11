@@ -500,5 +500,10 @@ export const withLock = async (key: string, cb: () => any) => {
 ### Add messages
 
 ```sh
+XADD fruits * color red name strawberry
+```
 
+### Consume message
+
+```sh
 ```
