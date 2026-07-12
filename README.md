@@ -506,4 +506,22 @@ XADD fruits * color red name strawberry
 ### Consume message
 
 ```sh
+XREAD STREAMS fruits 0-0
+```
+
+### Block reads
+
+```sh
+# block for 3000 ms
+XREAD BLOCK 3000 STREAMS fruits 0-0
+XRANGE fruits 123450-0 55555-0 COUNT 5
+```
+
+### Consumer groups
+
+```sh
+XGROUP CREATE fruits fruits-group 12345-0 MKSTREAM
+XGROUP CREATECONSUMER fruits fruits-group worker-1
+XGROUP CREATECONSUMER fruits fruits-group worker-2
+XINFO GROUPS fruits
 ```
